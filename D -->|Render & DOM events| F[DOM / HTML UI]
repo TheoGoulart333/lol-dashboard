@@ -1,0 +1,59 @@
+
+---
+
+## ✨ Funcionalidades
+
+- **Seleção Dinâmica de Campeões**: Carregamento da lista completa de campeões no patch atual.
+- **Detalhamento Hextech**: Atualização de avatar, função (role), título e habilidades (Passiva, Q, W, E, R).
+- **Gerador de Build e Runas Seeded**: Algoritmo determinístico baseado no campeão selecionado para composição de itens e runas.
+- **Sanitização de Tooltips**: Limpeza de tags HTML e variáveis dinamizadas do Data Dragon.
+
+---
+
+## 📁 Estrutura do Projeto
+
+| Caminho | Descrição |
+| :--- | :--- |
+| `src/types/index.ts` | Contratos e interfaces TypeScript para APIs |
+| `src/services/api.ts` | Chamadas de rede e consumo de endpoints |
+| `src/utils/helpers.ts` | Funções utilitárias puras (sanitização, geradores pseudo-aleatórios) |
+| `src/main.ts` | Ponto de entrada da aplicação e binding de UI |
+| `src/__tests__/` | Suíte de testes unitários com Vitest |
+| `.github/workflows/ci.yml` | Pipeline de Integração Contínua (CI) |
+
+---
+
+## 🚀 Instalação e Execução Local
+
+### Pré-requisitos
+- Node.js v20+
+- npm v10+
+
+### Passo a Passo
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/usuario/lol-hextech-dashboard.git
+   cd lol-hextech-dashboard
+   ```
+
+2. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Executar ambiente de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Executar verificação de tipos e testes unitários:**
+   ```bash
+   npm run typecheck
+   npm run test
+   ```
+
+5. **Gerar build de produção:**
+   ```bash
+   npm run build
+   ```
