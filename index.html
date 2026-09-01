@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Batalha — Dashboard LoL</title>
+  <meta name="description" content="Protótipo de dashboard de estatísticas pós-partida, inspirado na estética hextech de League of Legends.">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO / NAVEGAÇÃO ===================== -->
+       
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__hex" aria-hidden="true"></span>
+      <span class="topbar__title">Painel<strong>Hextech</strong></span>
+    </div>
+
+    <nav class="topbar__nav" aria-label="Navegação principal">
+      <a href="#resumo" class="is-active">Resumo</a>
+      <a href="#itens">Itens</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#historico">Histórico</a>
+    </nav>
+  </header>
+
+  <!-- ===================== LAYOUT PRINCIPAL ===================== -->
+
+  <main class="dashboard" id="resumo">
+    <section class="champion-select card" aria-label="Seleção de campeão">
+      <div class="champion-select__head">
+        <h2 class="card__title">Seleção de campeão</h2>
+        <span class="champion-select__hint" id="patch-tag">Carregando patch…</span>
+      </div>
+      <div class="champion-select__list" id="champion-list" role="listbox" aria-label="Campeões disponíveis">
+        <p class="champion-select__loading">Buscando campeões na Data Dragon…</p>
+      </div>
+    </section>
+
+    <!-- Banner do campeão escolhido -->
+
+    <section class="banner card" aria-label="Campeão em destaque">
+      <div class="banner__avatar" id="champion-avatar" aria-hidden="true"></div>
+      <div class="banner__info">
+        <p class="banner__role" id="champion-role">—</p>
+        <h1 class="banner__name">
+          <span id="champion-name">Selecione um campeão</span>
+          <span class="banner__title" id="champion-title"></span>
+        </h1>
+        <p class="banner__summoner" id="summoner-name">—</p>
+      </div>
+      <div class="banner__result" id="match-result">
+        <span class="banner__badge" id="result-badge">—</span>
+        <span class="banner__duration" id="match-duration">--:--</span>
+      </div>
+    </section>
+
+    <!-- Estatísticas (KDA, CS, Gold, Visão) -->
+
+    <section class="stats card" id="stats-grid" aria-label="Estatísticas da partida">
+      <h2 class="card__title">Estatísticas</h2>
+      <div class="stats__grid">
+      </div>
+    </section>
+
+    <!-- Lista de itens --->
+
+    <section class="items card" id="itens" aria-label="Build sugerida">
+      <h2 class="card__title">Build sugerida</h2>
+      <div class="items__rune" id="rune-chip" aria-label="Runa principal">
+        <span class="items__rune-icon" id="rune-icon"></span>
+        <div>
+          <p class="items__rune-label">Runa principal</p>
+          <p class="items__rune-name" id="rune-name">—</p>
+        </div>
+      </div>
+      <ul class="items__list" id="items-list">
+      </ul>
+    </section>
+
+    <!-- Grade de habilidades -->
+
+    <section class="abilities card" id="habilidades" aria-label="Habilidades do campeão">
+      <h2 class="card__title">Habilidades</h2>
+      <div class="abilities__grid" id="abilities-grid">
+        <p class="abilities__loading">Selecione um campeão acima.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="historico">
+    <p>
+      Campeões, itens, runas e habilidades: dados oficiais via
+      <a href="https://developer.riotgames.com/docs/lol" target="_blank" rel="noopener">Data Dragon (Riot Games)</a>.
+      Estatísticas de partida (KDA, ouro, duração) são fictícias — dados reais de
+      partida exigiriam a Riot Games API autenticada com um back-end.
+    </p>
+    <p>Protótipo de portfólio, sem vínculo oficial com a Riot Games.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
