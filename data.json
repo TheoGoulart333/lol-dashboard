@@ -1,0 +1,18 @@
+{
+  "_comentario": "Este arquivo contém APENAS dados de partida que, na vida real, viriam da Riot Games API autenticada (kills, gold, duração etc.) — algo que exige back-end, pois a chave de API não pode ficar exposta no front-end. Campeão, itens e runas agora vêm de verdade da Data Dragon (ver script.js).",
+  "player": {
+    "summonerName": "NightOwl#BR1",
+    "summonerLevel": 187,
+    "rank": "Diamante II",
+    "match": {
+      "result": "Vitória",
+      "duration": "28:41",
+      "kills": 9,
+      "deaths": 2,
+      "assists": 11,
+      "csPerMin": 8.4,
+      "gold": 14250,
+      "visionScore": 32
+    }
+  }
+}
