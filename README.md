@@ -8,3 +8,10 @@ Painel interativo de estatísticas e build pós-partida com temática Hextech de
 
 ## 🏗️ Arquitetura do Sistema
 
+```mermaid
+flowchart TD
+    A[Riot Data Dragon API] -->|Dados de Campeões & Itens| B[Services / Data Layer]
+    C[Local Data / json] -->|Fallback & Mocks| B
+    B -->|Modelos & Tipos| D[Core Application Logic]
+    D -->|Render & DOM events| E[Hextech UI / DOM]
+```
